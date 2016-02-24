@@ -54,5 +54,5 @@ $('.MyInputClass').autocomplete({
   
 ####  Plus :
 You can change $.get with $.getJSON or even $.ajax()<br>
-I'll do some modification and an exemple file soon.
+I'll do some modification(use in meteor with http.call) and an exemple file soon.
 
