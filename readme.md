@@ -29,7 +29,7 @@ Wikipedia Plugin :
 ####	Categories : 
 - Integer is the number of categories you want to extract<br>
 
-<pre>WikiRequester.[categories]([langue], [text], [integer], [Callback]);</pre>
+<pre>WikiRequester.categories([langue], [text], [integer], [Callback]);</pre>
   
 ####  Exemples :
 
