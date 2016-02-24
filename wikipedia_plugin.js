@@ -1,22 +1,13 @@
 WikiRequester = {
     /*
-     * WikiRequester.search([langue], [text], [Callback]);
-     *
-     * Exemple :
-     * WikiRequester.search("fr", text, function(result){
-     * console.log('WikiRequester.search : ', result);
-     * });
-     *
-     * Dans un autocomplete (JQUERY-UI)
-     * $('.search-box').autocomplete({
-     * source: function (req, result) {
-     * WikiRequester.search("fr", req.term, function(field){
-     * result(field);
-     * });
-     * }
-     * });
+     * Represents all the result from a wikipedia search.
+     * @constructor
+     * @param {string} langue - The language of the wikipedia page.
+     * @param {string} text - The text of the searched value.
+     * @param {WikiRequester~requestCallback} cb - The callback that handles the response.
      */
     search: function (langue, text, cb) {
+        "use strict";
         if (langue && text && cb) {
             var url = "https://" + langue + ".wikipedia.org/w/api.php?&action=opensearch&format=json&callback=?&search=" + text;
 
@@ -26,14 +17,14 @@ WikiRequester = {
         }
     },
     /*
-     * WikiRequester.id([langue], [text], [Callback]);
-     *
-     * Exemple :
-     * WikiRequester.id("fr", text, function(result){
-     * console.log('WikiRequester.id : ', result);
-     * });
+     * Represents the id of a wikipedia page.
+     * @constructor
+     * @param {string} langue - The language of the wikipedia page.
+     * @param {string} text - The text of the searched value.
+     * @param {WikiRequester~requestCallback} cb - The callback that handles the response.
      */
     id: function (langue, text, cb) {
+        "use strict";
         if (langue && text && cb) {
             if (text) {
                 var id;
@@ -49,14 +40,14 @@ WikiRequester = {
         }
     },
     /*
-     * WikiRequester.title([langue], [text], [Callback]);
-     *
-     * Exemple :
-     * WikiRequester.title("fr", text, function(result){
-     * console.log('WikiRequester.title : ', result);
-     * });
+     * Represents the title of a wikipedia page.
+     * @constructor
+     * @param {string} langue - The language of the wikipedia page.
+     * @param {string} text - The text of the searched value.
+     * @param {WikiRequester~requestCallback} cb - The callback that handles the response.
      */
     title: function (langue, text, cb) {
+        "use strict";
         if (langue && text && cb) {
             if (text) {
                 var title;
@@ -71,16 +62,15 @@ WikiRequester = {
             }
         }
     },
-
     /*
-     * WikiRequester.image([langue], [text], [Callback]);
-     *
-     * Exemple :
-     * WikiRequester.image("fr", text, function(result){
-     * console.log('WikiRequester.image : ', result);
-     * });
+     * Represents the image profile of a wikipedia page.
+     * @constructor
+     * @param {string} langue - The language of the wikipedia page.
+     * @param {string} text - The text of the searched value.
+     * @param {WikiRequester~requestCallback} cb - The callback that handles the response.
      */
     image: function (langue, text, cb) {
+        "use strict";
         if (langue && text && cb) {
             if (text) {
                 var image;
@@ -95,16 +85,15 @@ WikiRequester = {
             }
         }
     },
-
     /*
-     * WikiRequester.lastmodified([langue], [text], [Callback]);
-     *
-     * Exemple :
-     * WikiRequester.lastmodified("fr", text, function(result){
-     * console.log('WikiRequester.lastmodif : ', result);
-     * });
+     * Represents the date and hours of the latest modification of a wikipedia page.
+     * @constructor
+     * @param {string} langue - The language of the wikipedia page.
+     * @param {string} text - The text of the searched value.
+     * @param {WikiRequester~requestCallback} cb - The callback that handles the response.
      */
     lastmodified: function (langue, text, cb) {
+        "use strict";
         if (langue && text && cb) {
             if (text) {
                 var dateFacto;
@@ -125,16 +114,16 @@ WikiRequester = {
             }
         }
     },
-
     /*
-     * WikiRequester.lastmodified([langue], [text], [limit(nb of category shown)], [Callback]);
-     *
-     * Exemple :
-     * WikiRequester.categories("fr", text, 4, function(result){
-     * console.log('WikiRequester.categories : ', result);
-     * });
+     * Represents all the categories of a wikipedia page.
+     * @constructor
+     * @param {string} langue - The language of the wikipedia page.
+     * @param {string} text - The text of the searched value.
+     * @param {integer} limit - The limit of the number of category.
+     * @param {WikiRequester~requestCallback} cb - The callback that handles the response.
      */
     categories: function (langue, text, limit, cb) {
+        "use strict";
         if (langue && text && limit && cb) {
             if (text) {
                 var categories = [];
@@ -151,16 +140,15 @@ WikiRequester = {
             }
         }
     },
-
     /*
-     * WikiRequester.content([langue], [text], [Callback]);
-     *
-     * Exemple :
-     * WikiRequester.content("fr", text, function(result) {
-     * console.log('WikiRequester.content : ', result);
-     * });
+     * Represents all the content of a wikipedia page.
+     * @constructor
+     * @param {string} langue - The language of the wikipedia page.
+     * @param {string} text - The text of the searched value.
+     * @param {WikiRequester~requestCallback} cb - The callback that handles the response.
      */
     content: function (langue, text, cb) {
+        "use strict";
         if (langue && text && cb) {
             if (text) {
                 var content = [];
@@ -182,16 +170,15 @@ WikiRequester = {
             }
         }
     },
-
     /*
-     * WikiRequester.summary([langue], [text], [Callback]);
-     *
-     * Exemple :
-     * WikiRequester.summary("fr", text , function(result){
-     * console.log('WikiRequester.summary : ', result);
-     * });
+     * Represents the summary of a wikipedia page.
+     * @constructor
+     * @param {string} langue - The language of the wikipedia page.
+     * @param {string} text - The text of the searched value.
+     * @param {WikiRequester~requestCallback} cb - The callback that handles the response.
      */
     summary: function (langue, text, cb) {
+        "use strict";
         if (langue && text && cb) {
             if (text) {
                 var nb = [];
