@@ -17,7 +17,8 @@ What you can extract from a page:<br>
 My code works but i'm still a student (pretty sure there is a better way to use the wikipedia Api).
 
 > Source : https://www.mediawiki.org/wiki/MediaWiki/en <br>
-> Librairies : Jquery, Jquery-UI (not necessary, it's just for the function autocomplete())
+> Librairies : Jquery, Jquery-UI (not necessary, it's just for the function autocomplete())<br>
+> Comment : Jsdoc : http://usejsdoc.org (I use jsdoc to comment my code)
 
 Wikipedia Plugin : 
 -----------------
